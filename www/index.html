@@ -16,9 +16,9 @@
         
         <script type="text/javascript" charset="utf-8" src="cordova-1.8.1.js"></script>
         
-        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile.structure-1.2.0.min.css" />
-        <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
-        <script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+        <link rel="stylesheet" href="js/jquery.mobile.structure-1.2.0.min.css" />
+        <script src="js/jquery-1.7.2.min.js"></script>
+        <script src="js/jquery.mobile-1.2.0.min.js"></script>
         
         <script src="js/camera.js"></script>
         <script src="js/app.js"></script>
@@ -65,50 +65,110 @@
           </script>
         </head>
   <body onload="onBodyLoad()">
+<!--page template
+ 
+ <div data-role="page" id="YOURID" data-theme="a">
+    <div data-role="header">
+ 
+    </div>
+
+    
+    <div data-role="content">
+ 
+    </div>
+    
+
+     <div data-role="footer">
+     
+     </div>
+    
+    </div>
+ 
+ 
+ -->
     
     
+    <!-- page-->
     <div data-role="page" id="home" data-theme="a">
       <div data-role="header">
-        <h1>Home</h1>
+        <h1>CacheDemPics</h1>
+      </div><!-- /header -->
+      
+      <div data-role="content">
+        <a href="#camera" data-theme="a" data-role="button" > New Game</a>
+        <a href="#continuegame" data-role="button">Continue Game</a>
+      </div><!-- /content -->
+      
+      <!--footer
+       <div data-role="footer">
+       <h4>Page Footer</h4>
+       </div><!-- /footer -->
+      
+    </div>
+    <!--/page-->
+    <!--page-->
+    
+    <div data-role="page" data-theme="a" id="camera">
+      
+      <div data-role="header">
+        <h1>Camera</h1>
       </div><!-- /header -->
       
       <div data-role="content">
         
-        <a href="#camera" data-theme="a" data-role="button" > camera</a>
-        <a href="#home" data-role="button">home</a>
-        
-        
-        <p>Home page Page content goes here.</p>
+        <button onclick="capturePhoto();">Capture Photo</button>
+        <!--
+         <button onclick="capturePhotoEdit();">Capture Editable Photo</button>
+         <button onclick="getPhoto(pictureSource.PHOTOLIBRARY);">From Photo Library</button>
+         <button onclick="getPhoto(pictureSource.SAVEDPHOTOALBUM);">From Photo Album</button>
+         -->
+        <img style="display:none;width:60px;height:60px;" id="smallImage" alt="image" src="default.png" />
+        <img style="display:none;" id="largeImage" alt="image" src="default.png" />
+        <p>Camera Page content goes here.</p>
       </div><!-- /content -->
       
       <div data-role="footer">
-        <h4>Page Footer</h4>
+        <div data-role="navbar" class="ui-navbar" role="navigation">
+          <ul class="ui-grid-a">
+            <li class="ui-block-a">
+              <a href="#home" data-role="button" data-theme="a"><span class="ui-btn-text">Home</span></a>
+            </li>
+            <li class="ui-block-b">
+              <a href="#camera" data-role="button" data-theme="a"><span class="ui-btn-text">Camera</span></a>
+            </li>
+          </ul>
+        </div>
       </div><!-- /footer -->
-
     </div>
-    <div data-role="page" data-theme="a" id="camera">
-      
-    <div data-role="header">
-      <h1>Camera</h1>
-    </div><!-- /header -->
-    
-    <div data-role="content">
-      <a href="#home" data-role="button">Home</a>
-      <a href="#camera" data-role="button">Camera</a>
-      <button onclick="capturePhoto();">Capture Photo</button> <br>
-      <button onclick="capturePhotoEdit();">Capture Editable Photo</button> <br>
-      <button onclick="getPhoto(pictureSource.PHOTOLIBRARY);">From Photo Library</button><br>
-      <button onclick="getPhoto(pictureSource.SAVEDPHOTOALBUM);">From Photo Album</button><br>
-      <img style="display:none;width:60px;height:60px;" id="smallImage" alt="image" src="default.png" />
-      <img style="display:none;" id="largeImage" alt="image" src="default.png" />
-      <p>Camera Page content goes here.</p>
-    </div><!-- /content -->
-    
-    <div data-role="footer">
-      <h4>Page Footer</h4>
-    </div><!-- /footer -->
-    
-
+    <!--/page-->
+    <!-- page continue game-->
+    <div data-role="page" id="continuegame" data-theme="a">
+      <div data-role="header">
+        
+      </div>
+      <div data-role="content">
+          <div data-role="controlgroup" class="ui-corner-all ui-controlgroup ui-controlgroup-vertical">
+            <a data-role="button">Bill</a>
+            <a data-role="button">Joe</a>
+            <a data-role="button">Chris</a>
+            <a data-role="button">Tom</a>
+          </div>
+      </div>
+      <div data-role="footer">
+        <div data-role="navbar" class="ui-navbar" role="navigation">
+          <ul class="ui-grid-a">
+            <li class="ui-block-a">
+              <a href="#home" data-role="button" data-theme="a"><span class="ui-btn-text">Home</span></a>
+            </li>
+            <li class="ui-block-b">
+              <a href="#camera" data-role="button" data-theme="a"><span class="ui-btn-text">Camera</span></a>
+            </li>
+          </ul>
+        </div>
+        
+      </div>
     </div>
+    
+    <!--/page continue game-->
   </body>
 </html>
