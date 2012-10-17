@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A690522C162DF43300DB2C2B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A690522B162DF43300DB2C2B /* Default-568h@2x.png */; };
 		A693DBD016264143006A13B9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A693DBCF16264143006A13B9 /* Foundation.framework */; };
 		A693DBD216264143006A13B9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A693DBD116264143006A13B9 /* UIKit.framework */; };
 		A693DBD416264143006A13B9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A693DBD316264143006A13B9 /* CoreGraphics.framework */; };
@@ -37,9 +38,11 @@
 		A693DC1816264144006A13B9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A693DC1716264144006A13B9 /* AppDelegate.m */; };
 		A693DC1B16264144006A13B9 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A693DC1A16264144006A13B9 /* MainViewController.m */; };
 		A693DC1D16264144006A13B9 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A693DC1C16264144006A13B9 /* MainViewController.xib */; };
+		A693DC2916264252006A13B9 /* www in Resources */ = {isa = PBXBuildFile; fileRef = A693DC2816264252006A13B9 /* www */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A690522B162DF43300DB2C2B /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		A693DBCB16264143006A13B9 /* CacheDemPics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CacheDemPics.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A693DBCF16264143006A13B9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A693DBD116264143006A13B9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -77,6 +80,7 @@
 		A693DC1C16264144006A13B9 /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MainViewController.xib; path = Classes/MainViewController.xib; sourceTree = "<group>"; };
 		A693DC1F16264144006A13B9 /* README */ = {isa = PBXFileReference; lastKnownFileType = text; name = README; path = Plugins/README; sourceTree = "<group>"; };
 		A693DC2016264144006A13B9 /* verify.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = verify.sh; sourceTree = "<group>"; };
+		A693DC2816264252006A13B9 /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; path = www; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +118,8 @@
 		A693DBBD16264143006A13B9 = {
 			isa = PBXGroup;
 			children = (
+				A690522B162DF43300DB2C2B /* Default-568h@2x.png */,
+				A693DC2816264252006A13B9 /* www */,
 				A693DBE916264143006A13B9 /* CacheDemPics */,
 				A693DBCE16264143006A13B9 /* Frameworks */,
 				A693DBCC16264143006A13B9 /* Products */,
@@ -328,6 +334,8 @@
 				A693DC1216264144006A13B9 /* Capture.bundle in Resources */,
 				A693DC1416264144006A13B9 /* Cordova.plist in Resources */,
 				A693DC1D16264144006A13B9 /* MainViewController.xib in Resources */,
+				A693DC2916264252006A13B9 /* www in Resources */,
+				A690522C162DF43300DB2C2B /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -483,6 +491,7 @@
 					"CORDOVA_FRAMEWORK=1",
 				);
 				INFOPLIST_FILE = "CacheDemPics/CacheDemPics-Info.plist";
+				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = (
 					"-weak_framework",
 					UIKit,
@@ -512,6 +521,7 @@
 					"CORDOVA_FRAMEWORK=1",
 				);
 				INFOPLIST_FILE = "CacheDemPics/CacheDemPics-Info.plist";
+				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = (
 					"-weak_framework",
 					UIKit,
@@ -547,6 +557,7 @@
 				A693DC2516264144006A13B9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
